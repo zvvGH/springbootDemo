@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 /**
  * Created by Zvv ON 2019/4/26
  */
-@Target({ElementType.METHOD,ElementType.TYPE})
+@Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Mapping

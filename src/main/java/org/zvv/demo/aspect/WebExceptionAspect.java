@@ -22,18 +22,20 @@ import java.io.PrintWriter;
 public class WebExceptionAspect {
 
     @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
-    private void webPointcut(){}
+    private void webPointcut() {
+    }
 
-    @AfterThrowing(pointcut = "webPointcut()",throwing = "e")
+    @AfterThrowing(pointcut = "webPointcut()", throwing = "e")
     private void afterThrowing(Exception e) throws Throwable {
         log.info("Exception 来了");
-        if (!StringUtils.isEmpty(e.getMessage())){
+        if (!StringUtils.isEmpty(e.getMessage())) {
             writeContent(e.getMessage());
-        }else {
+        } else {
             writeContent("出异常啦");
         }
     }
-    private void writeContent(String str){
+
+    private void writeContent(String str) {
         HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
         response.reset();
         response.setCharacterEncoding("UTF-8");
@@ -41,7 +43,7 @@ public class WebExceptionAspect {
         response.setHeader("icop-content-type", "exception");
         try {
             PrintWriter writer = response.getWriter();
-            writer.print(StringUtils.isEmpty(str)?"":str);
+            writer.print(StringUtils.isEmpty(str) ? "" : str);
             writer.flush();
             writer.close();
         } catch (IOException e) {

@@ -23,7 +23,7 @@ public class CustomRequestMappingHandlerMapping extends RequestMappingHandlerMap
         return this.createCondition(apiVersion);
     }
 
-    private RequestCondition<ApiVersionCondition> createCondition(ApiVersion apiVersion){
+    private RequestCondition<ApiVersionCondition> createCondition(ApiVersion apiVersion) {
         return apiVersion == null ? null : new ApiVersionCondition(apiVersion.value());
     }
 }

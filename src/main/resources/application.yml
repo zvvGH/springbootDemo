@@ -1,7 +1,5 @@
 server:
   port: 8089
-  servlet:
-    context-path: /api
   tomcat:
     max-connections: 1000
     min-spare-threads: 10
@@ -11,4 +9,10 @@ spring:
   jpa:
     database: MYSQl
     show-sql: true
+  redis:
+    database: 0
+    host: test.team.tianzhuanapp.cn
+    port: 6379
+    password: 123456
+
 
