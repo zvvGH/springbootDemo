@@ -4,7 +4,7 @@
          "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="M:\GIT\springbootDemo\src\main\resources\mysql-connector-java-5.1.44-bin.jar"/>
+    <classPathEntry location="D:\GIT\springbootDemo\src\main\resources\mysql-connector-java-5.1.44-bin.jar"/>
     <context id="my" targetRuntime="MyBatis3">
 
         <!--自动实现Serializable接口-->
@@ -49,7 +49,7 @@
         <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample
             是否生成 example类 -->
 
-        <table tableName="applet_shop" domainObjectName="AppletShop"
+        <table tableName="applet_msg" domainObjectName="AppletMsg"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
@@ -57,22 +57,5 @@
                selectByExampleQueryId="false">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tableName="shop_goods" domainObjectName="ShopGoods"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
-        <table tableName="user_good" domainObjectName="UserGood"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
-
     </context>
 </generatorConfiguration>
