@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * redis工具类
  */
-@Service
 public class RedisUtil {
 
     private static final Logger LOG = LoggerFactory.getLogger(RedisUtil.class);

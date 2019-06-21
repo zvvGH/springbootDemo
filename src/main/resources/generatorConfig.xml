@@ -17,7 +17,7 @@
 
         <!--数据库基本信息-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://123.56.14.90:3306/tz_applet"
+                        connectionURL="jdbc:mysql://123.56.14.90:3306/tz_base_dev"
                         userId="root"
                         password="tzteam888"></jdbcConnection>
 
@@ -49,7 +49,7 @@
         <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample
             是否生成 example类 -->
 
-        <table tableName="applet_msg" domainObjectName="AppletMsg"
+        <table tableName="SYSTEM_USER_DEVICE" domainObjectName="BoxDevice"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
